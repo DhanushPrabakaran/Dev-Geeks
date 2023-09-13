@@ -17,7 +17,7 @@ const Header = () => {
 
   return (
     <div className="navbar bg-base-100  h-5 w-auto  border-b border-b-stone-500">
-      <div className="flex-none">
+      <div className="flex-none lg:hidden min-md:visible">
         {/* <button className="btn btn-square btn-ghost"> */}
         <label htmlFor="my-drawer" className="btn btn-square btn-ghost">
         <svg

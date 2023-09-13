@@ -2,7 +2,7 @@ import React from 'react'
 
 const Drawer = () => {
   return (
-    <div className="drawer h-full">
+    <div className="drawer h-full lg:hidden min-md:visible">
   <input id="my-drawer" type="checkbox" className="drawer-toggle" />
   <div className="drawer-content">
     {/* Page content here */}
