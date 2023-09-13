@@ -24,10 +24,10 @@ const Container = () => {
         <p>Created By user</p>
         </div>
          
-        <div
-        className="btn bg-black text-xl">
+        <button
+        className="btn ">
         view
-        </div>
+        </button>
       </div>
     </div>
   
