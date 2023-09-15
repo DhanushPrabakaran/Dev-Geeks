@@ -1,4 +1,4 @@
-import './globals.css'
+
 import type { Metadata } from 'next'
 import { Comic_Neue } from 'next/font/google'
 const comic_neue =Comic_Neue(
@@ -9,8 +9,8 @@ const comic_neue =Comic_Neue(
   },
 );
 export const metadata: Metadata = {
-  title: 'Dev Home',
-  description: 'a open website for developers',
+  title: 'projects',
+  description: 'platform for sharing websites',
 }
 
 export default function RootLayout({

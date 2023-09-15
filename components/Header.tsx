@@ -40,14 +40,13 @@ const Header = () => {
         <div className="flex items-center ">
           <a className="btn btn-ghost text-lg normal-case mr-2">Dev Geeks</a>
           <div className="form-control relative  ">
-           
-              <input
-                ref={inputRef}
-                type="text"
-                placeholder="Search here..."
-                className="input input-bordered input-sm input-ghost"
-              />
-            
+            <input
+              ref={inputRef}
+              type="text"
+              placeholder="Search here..."
+              className="input input-bordered input-sm input-ghost"
+            />
+
             <span className=" absolute right-1 top-1  ">
               <kbd className="kbd kbd-sm ">alt</kbd> +
               <kbd className="kbd kbd-sm">l</kbd>
@@ -73,25 +72,6 @@ const Header = () => {
           </ul>
         </div>
       </div>
-
-      {/* <div className="dropdown dropdown-end">
-        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-          <div className="w-10 rounded-full">
-            <Image src={Profile} alt="Picture of the author" />
-          </div>
-        </label>
-        <ul
-          tabIndex={0}
-          className="mt-3 z-[1] p-2 shadow menu menu-md dropdown-content bg-base-100 rounded-box w-40"
-        >
-          <li>
-            <a className="justify-center btn-neutral">Profile</a>
-          </li>
-          <li>
-            <a className="justify-center btn-error">Logout</a>
-          </li>
-        </ul>
-      </div> */}
     </div>
   );
 };
