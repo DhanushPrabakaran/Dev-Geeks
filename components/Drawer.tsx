@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 const Drawer = () => {
   return (
-    <div className="drawer h-full lg:hidden min-md:visible ">
+    <div className="drawer z-10 h-full lg:hidden min-md:visible ">
       <input id="my-drawer" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content">
         {/* Page content here */}
