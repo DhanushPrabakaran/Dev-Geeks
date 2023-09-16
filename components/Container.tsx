@@ -7,7 +7,7 @@ const Container = () => {
     
     <div
     // className="bg-base-200 hover:border hover:bg-base-100 hover:border-stone-500 w-full h-fit mt-2 p-2">
-    className="bg-base-200 border-t-4 border-t-primary  rounded-md  h-fit mr-2 my-1 p-2">
+    className="bg-base-200 border-t-8 border-t-primary  rounded-md  h-fit mr-2 my-1 p-2">
       <h1
       className=" text-2xl text-secondary-focus font-extrabold">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dolorem unde fuga consectetur quis et.
@@ -25,8 +25,8 @@ const Container = () => {
         </div>
          
         <button
-        className="btn btn-outline btn-secondary ">
-        view
+        className="btn btn-outline font-extrabold btn-secondary ">
+        view 🚀
         </button>
       </div>
     </div>

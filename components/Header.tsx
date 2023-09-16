@@ -38,13 +38,13 @@ const Header = () => {
       </div>
       <div className=" gap-2 flex-1 justify-between ">
         <div className="flex items-center ">
-          <a className="btn btn-ghost text-lg normal-case mr-2">Dev Geeks</a>
+          <a className="btn btn-ghost text-lg normal-case mr-2"><span className=" text-secondary font-extrabold">Dev</span>Geeks</a>
           <div className="form-control relative  ">
             <input
               ref={inputRef}
               type="text"
               placeholder="Search here..."
-              className="input input-bordered input-sm input-ghost"
+              className="input  input-bordered input-sm input-ghost"
             />
 
             <span className=" absolute right-1 top-1  ">

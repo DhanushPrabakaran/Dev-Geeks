@@ -4,8 +4,8 @@ const Footer = () => {
   return (
     <footer className="footer p-10 bg-base-200 text-base-content">
   <aside
-  className=" flex justify-center flex-col">
-  <a className="btn btn-ghost text-3xl normal-case text-start">Dev Geeks</a>
+  className=" flex justify-center  flex-col">
+  <a className="btn btn-ghost text-3xl normal-case text-right justify-start">Dev Geeks</a>
     <p>developers community<br/>Providing reliable tech since 2023</p>
   </aside> 
   <nav>
