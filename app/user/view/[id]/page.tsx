@@ -1,3 +1,4 @@
+// "use client"
 import CopyRight from "@/components/CopyRight";
 import Drawer from "@/components/Drawer";
 import Footer from "@/components/Footer";
@@ -6,33 +7,28 @@ import Navbar from "@/components/Navbar";
 import Rightbar from "@/components/Rightbar";
 import React from "react";
 import Image from "next/image";
-import Profile from "@/public/profile.svg";
-import Link from "next/link";
-type posttype = {
+
+type UserType = {
   id: number;
-  title: string;
-  body: string;
+  firstName: string;
+  email :string;
+  lastName: string;
   userId: number;
-  tags: string[];
-  reactions: number;
+  image: string;
+  title: string;
 };
 export async function getpost(id: number) {
-  const res = await fetch(`https://dummyjson.com/posts/${id}`, {
+  const res =await  fetch(`https://dummyjson.com/users/${id}`, {
     cache: "force-cache",
   });
-  const result: posttype = await res.json();
+  const result: UserType = await res.json();
   return result;
 }
-export async function getimages (userid : number){
-  const res =await fetch(`https://dummyjson.com/users/${userid}?select=image`)
-  const data  = await res.json()
-  return   <Image src={data?.image as any } alt={data?.id as any} width="35" height ="35"/>
 
-}
 const page = async ({ params }: { params: { id: number } }) => {
   
   const data = await getpost(params.id);
-  const imageloader =await getimages(data.userId);
+ 
   return (
     <main className="flex flex-col">
       <Header />
@@ -50,25 +46,23 @@ const page = async ({ params }: { params: { id: number } }) => {
 
             <div className=" w-full flex align-baseline flex-col  items-center">
             <h1 className=" text-center text-4xl text-secondary-focus font-extrabold mb-3">
-              {data.title}
+              
             </h1>
               <div className="flex w-full justify-between align-middle flex-row  ">
                 <div
                 className=" ml-3 flex items-end ">
-                {/* <Image
-                  src={`https://dummyjson.com/users/${data.userId}?select=image`}
-                  // https://dummyjson.com/users/${data.userId}?select=image
+                <Image
+                  src={`${data.image}`}
                   width={35}
                   height={35}
                   alt="Picture of the author"
-                /> */}
-                {imageloader}
+                />
                 <p>
-                  Created By 
-                  <Link
-                  href={`/user/view/${data.userId}`}>
-                    {data.userId}
-                  </Link>
+              user firstName
+                  {/* <Link
+                  href={`/user/view/${data.userId}`}> */}
+                    {data.firstName}
+                  {/* </Link> */}
                 </p>
                 </div>
                 <div>
@@ -82,7 +76,7 @@ const page = async ({ params }: { params: { id: number } }) => {
             </div>
             <div className="divider"></div>
             <p className="">
-              {data.body}
+              {/* {data.body} */}
               {/* Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum quod tempora nam alias quia quis numquam blanditiis aliquam ducimus illo cupiditate accusamus deserunt neque dolorum, adipisci repellendus sapiente distinctio doloremque? */}
             </p>
           </div>

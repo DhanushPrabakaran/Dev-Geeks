@@ -20,9 +20,9 @@ export default function Home() {
           <div className=" text-4xl text-center font-extrabold font-sans text-secondary m-4">
             Projects
           </div>
+          {/* <Container />
           <Container />
-          <Container />
-          <Container />
+          <Container /> */}
         </div>
         <Rightbar />
       </div>

@@ -1,4 +1,4 @@
-"use client"
+// "use client"
 import React from 'react'
 import Image from 'next/image'
 import Profile from '@/public/profile.svg'
@@ -11,8 +11,14 @@ type posttype ={
   "tags": string[],
   "reactions": number
 }
-const Container = (data : posttype ,type : string) => {
-  
+export async function getimages (userid : number){
+  const res =await fetch(`https://dummyjson.com/users/${userid}?select=image`)
+  const data  = await res.json()
+  return   <Image src={data?.image as any } alt={data?.id as any} width="35" height ="35"/>
+
+}
+const Container = async (data : posttype ,type : string) => {
+  const imageloader =await getimages(data.userId);
   return (
     
     
@@ -31,8 +37,9 @@ const Container = (data : posttype ,type : string) => {
       className=" w-full flex justify-between items-center">
         <div
         className='flex items-center'>
-        <Image src={Profile} width={35} height={35} alt="Picture of the author" />
-        <p>Created By {data.userId}</p>
+        {/* <Image src={Profile} width={35} height={35} alt="Picture of the author" /> */}
+        {imageloader}
+        <div>Created By <div className='btn btn-active btn-link'>{data.userId}</div></div>
         </div>
         <Link href={`/project/view/${data.id}`}
         className='btn btn-outline font-extrabold btn-secondary '> view 🚀</Link>
