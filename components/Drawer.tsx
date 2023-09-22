@@ -16,19 +16,19 @@ const Drawer = () => {
           href={"/"}
           className=" btn btn-secondary  text-left w-full hover:bg-base-100 hover:text-secondary-focus  m-1">🏠 Home</Link>
           <Link
-          href={"/Idea"}
+          href={"/idea"}
           className=" btn btn-secondary text-left w-full hover:bg-base-100 hover:text-secondary-focus m-1">💭 Idea</Link>
           <Link
           href={"/project"}
           className=" btn btn-secondary text-left w-full hover:bg-base-100 hover:text-secondary-focus m-1">💻 Projects</Link>
           <Link
-          href={"/Groups"}
+          href={"/group"}
           className=" btn btn-secondary text-left w-full hover:bg-base-100 hover:text-secondary-focus m-1">👥 Groups</Link>
           <Link
-          href={"/📝Test"}
+          href={"/test"}
           className=" btn btn-secondary text-left w-full hover:bg-base-100 hover:text-secondary-focus m-1">📝Test</Link>
           <Link
-          href={"/Vers"}
+          href={"/betaversion"}
           className=" btn btn-secondary text-left w-full hover:bg-base-100 hover:text-secondary-focus m-1">📦β Vers</Link>
           
         </ul>

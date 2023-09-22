@@ -1,3 +1,4 @@
 {
-    "editor.cursorBlinking": "smooth"
+    "editor.cursorBlinking": "smooth",
+    "prisma-smart-formatter.typescriptreact.defaultFormatter": "esbenp.prettier-vscode"
 }

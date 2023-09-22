@@ -1,7 +1,18 @@
+"use client"
 import React from 'react'
 import Image from 'next/image'
 import Profile from '@/public/profile.svg'
-const Container = () => {
+import Link from 'next/link'
+type posttype ={
+  "id": number,
+  "title": string,
+  "body": string,
+  "userId": number,
+  "tags": string[],
+  "reactions": number
+}
+const Container = (data : posttype ,type : string) => {
+  
   return (
     
     
@@ -10,24 +21,24 @@ const Container = () => {
     className="bg-base-200 border-t-8 border-t-primary  rounded-md  h-fit mr-2 my-1 p-2">
       <h1
       className=" text-2xl text-secondary-focus font-extrabold">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dolorem unde fuga consectetur quis et.
+        {data.title}
       </h1>
       <p
       className="">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus in deleniti magnam exercitationem nobis! Minima laboriosam labore maxime nostrum suscipit explicabo obcaecati, temporibus fuga fugiat dignissimos voluptates quod quaerat magni!
+       {data.body}
       </p>
       <div
       className=" w-full flex justify-between items-center">
         <div
         className='flex items-center'>
         <Image src={Profile} width={35} height={35} alt="Picture of the author" />
-        <p>Created By user</p>
+        <p>Created By {data.userId}</p>
         </div>
-         
-        <button
-        className="btn btn-outline font-extrabold btn-secondary ">
-        view 🚀
-        </button>
+        <Link href={`/project/view/${data.id}`}
+        className='btn btn-outline font-extrabold btn-secondary '> view 🚀</Link>
+        
+       
+        
       </div>
     </div>
   

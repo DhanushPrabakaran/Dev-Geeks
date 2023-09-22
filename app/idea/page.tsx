@@ -43,7 +43,7 @@ export  default async function Home() {
         </div>
         <div className=" flex-1 h-screen grow-1  overflow-y-scroll overflow-x-hidden scroll-smooth flex flex-col  ">
           <div className=" text-4xl text-center font-extrabold font-sans text-secondary m-4">
-            Projects
+            ideas
           </div>
           {
             posts.map(post=><Container {...{...post,type} }key={post.id}/>)

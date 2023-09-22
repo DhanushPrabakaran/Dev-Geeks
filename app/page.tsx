@@ -57,42 +57,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-          {/* <div className="hero lg:h-full h-fit bg-base-200">
-            <div className="hero-content flex-col lg:flex-row">
-              <div className=" flex items-center flex-col ">
-                <h1 className="text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-secondary via-success to-secondary ">
-                  WELCOME YOU ALL
-                </h1>
-                <p className="py-6 text-center">
-                  Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                  assumenda excepturi exercitationem quasi. In deleniti eaque
-                  aut repudiandae et a id nisi.
-                </p>
-                <button className="btn btn-primary">Get Started</button>
-              </div>
-              <div className="mockup-window border bg-base-300 w-2/3 h-2/3 ">
-                <div className="flex flex-col align-middle items-center justify-center px-4 py-16 bg-base-200 h-full ">
-                  <div>
-                    <div className=" text-primary">Begin</div>
-                    <div className=" text-secondary">
-                      design your product with the help of all the contributors
-                      and gater reviesws
-                    </div>
-                  </div>
-
-                  <div>
-                    <div>Begin</div>
-                    <div>
-                      design your product with the help of all the contributors
-                      and gater reviesws
-                    </div>
-                  </div>
-
-                  
-                </div>
-              </div>
-            </div>
-          </div> */}
         </div>
         {/* <Rightbar /> */}
       </div>

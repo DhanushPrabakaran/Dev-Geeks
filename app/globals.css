@@ -18,13 +18,13 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #2b3ac5af;
+  background-color: #ffffff6d;
   border-radius: 10px;
   width: 1px;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #EDF2F7;
+  background-color: #000000;
   border-radius: 10px;
 }
 
