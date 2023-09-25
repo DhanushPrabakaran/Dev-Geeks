@@ -1,5 +1,4 @@
 "use client"
-import Image from "next/image";
 import Header from "@/components/Header";
 import Drawer from "@/components/Drawer";
 import CopyRight from "@/components/CopyRight";
@@ -28,16 +27,10 @@ export default function Home() {
                 </h1>
                 <div
                 className=" text-2xl text-center w-full mb-2 ">
-               we help you to 
+               we help you to
                <br />  <span
                className=" text-primary text-4xl text-justify"><Typewriter text={ ["ideate" , "discuss", "collabrate" , "dev\nelop","test", "relese"]}  speed={500} /></span>
                 </div>
-                {/* <p className="py-6 text-center">
-                
-                  Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                  assumenda excepturi exercitationem quasi. In deleniti eaque
-                  aut repudiandae et a id nisi.
-                </p> */}
                 <button className="btn btn-primary">Get Started</button>
               </div>
               <div className="mockup-window border bg-base-300 w-2/3 h-2/3 ">
