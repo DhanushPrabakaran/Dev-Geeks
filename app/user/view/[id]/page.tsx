@@ -17,18 +17,22 @@ type UserType = {
   image: string;
   title: string;
 };
-export async function getpost(id: number) {
-  const res =await  fetch(`https://dummyjson.com/users/${id}`, {
-    cache: "force-cache",
-  });
-  const result: UserType = await res.json();
-  return result;
-}
+// export async function getpost(id: number) {
+//   const res =await  fetch(`https://dummyjson.com/users/${id}`, {
+//     cache: "force-cache",
+//   });
+//   const result: UserType = await res.json();
+//   return result;
+// }
 
 const page = async ({ params }: { params: { id: number } }) => {
   
-  const data = await getpost(params.id);
- 
+  // const data = await getpost(params.id);
+  var data  = await  fetch(`https://dummyjson.com/users/${params.id}`, {
+    cache: "force-cache",
+  }).then(
+    (res) => res.json().then((data) => data)
+    );
   return (
     <main className="flex flex-col">
       <Header />

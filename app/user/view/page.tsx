@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import Header from "@/components/Header";
 import Drawer from "@/components/Drawer";
@@ -10,6 +9,7 @@ import Rightbar from "@/components/Rightbar";
 export default function Home() {
   return (
     <main className="flex flex-col">
+
       <Header />
       <Drawer />
       <div className="flex flex-row">
@@ -20,14 +20,13 @@ export default function Home() {
           <div className=" text-4xl text-center font-extrabold font-sans text-secondary m-4">
             Projects
           </div>
-          {/* <Container />
-          <Container />
-          <Container /> */}
         </div>
         <Rightbar />
       </div>
+      
       <Footer />
-      <CopyRight/>
+      <CopyRight />
+
     </main>
   );
 }

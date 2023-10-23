@@ -16,23 +16,19 @@ type posttype = {
   tags: string[];
   reactions: number;
 };
-export async function getpost(id: number) {
-  const res = await fetch(`https://dummyjson.com/posts/${id}`, {
-    cache: "force-cache",
-  });
-  const result: posttype = await res.json();
-  return result;
-}
-export async function getimages (userid : number){
-  const res =await fetch(`https://dummyjson.com/users/${userid}?select=image`)
-  const data  = await res.json()
-  return   <Image src={data?.image as any } alt={data?.id as any} width="35" height ="35"/>
 
-}
 const page = async ({ params }: { params: { id: number } }) => {
   
-  const data = await getpost(params.id);
-  const imageloader =await getimages(data.userId);
+  const data = await fetch(`https://dummyjson.com/posts/${params.id}`, {
+    cache: "force-cache",
+  }).then(
+    (res) => res.json().then((data) => data)
+  );
+  const imageloader =await await fetch(`https://dummyjson.com/users/${params.id}?select=image`, {
+    cache: "force-cache",
+  }).then(
+    (res) => res.json().then((data) => <Image src={data?.image as any } alt={data?.id as any} width="35" height ="35"/>)
+  );
   return (
     <main className="flex flex-col">
       <Header />

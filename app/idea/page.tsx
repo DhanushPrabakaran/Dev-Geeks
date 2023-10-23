@@ -24,15 +24,13 @@ type Propstype = {
   "limit":number,
 }
 
-export async function getpost() {
-  const res = await fetch(`https://dummyjson.com/posts`)
-  const result:Propstype=await  res.json();
-  return   result.posts;
-}
+
 
 export  default async function Home() {
   const type = "project";
-  const posts : posttype[] = await getpost();
+  var posts : posttype[] = await fetch(`https://dummyjson.com/posts`).then(
+    (res) => res.json().then((data) => data.posts)
+    );
   return (
     <main className="flex flex-col">
       <Header />
