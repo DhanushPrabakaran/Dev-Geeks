@@ -2,8 +2,10 @@
 import React, { useEffect, useRef } from "react";
 import logo from "@/public/next.svg";
 import Image from "next/image";
+import { useSession } from "next-auth/react";
 import Profile from "@/public/profilepic.jpeg";
 const Header = () => {
+  const { data: session } = useSession()
   const inputRef = useRef(null);
   const keyDownHandler = (event: KeyboardEvent) => {
     if (event.altKey && event.key === "l") {
@@ -55,7 +57,7 @@ const Header = () => {
         <div className="dropdown dropdown-end">
           <label tabIndex={0} className="btn btn-neutral btn-circle avatar">
             <div className="w-7 rounded-full">
-              <Image src={Profile} alt="Picture of the author" />
+              <Image src={ session?.user?.image || Profile} alt="Picture of the author" fill={true} className=" rounded-full" />
             </div>
           </label>
           <ul
@@ -66,7 +68,7 @@ const Header = () => {
               <a className="justify-center btn-neutral m-1">Profile</a>
             </li>
             <li>
-              <a className="justify-center btn-error m-1">Logout</a>
+              <a href="/api/auth/signout" className="justify-center btn-error m-1">Logout</a>
             </li>
           </ul>
         </div>

@@ -1,6 +1,10 @@
+
 import React from 'react'
+
 import Link from 'next/link'
 const Navbar = () => {
+  
+
   return (
     <ul className="menu items-center text-start  p-4 w-44 h-full bg-base-200 text-base-content opacity-80">
           {/* Sidebar content here */}
