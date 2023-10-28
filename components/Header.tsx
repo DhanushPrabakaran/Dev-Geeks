@@ -76,7 +76,7 @@ const Header = () => {
               {!session ? (
                 <a
                 onClick={() => {
-                  signIn();
+                  signIn("github",{callbackUrl:"/"});
                 }}
                   className="justify-center btn-error m-1"
                 >
