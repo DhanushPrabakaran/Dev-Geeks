@@ -8,6 +8,7 @@ import Navbar from "@/components/Navbar";
 import Rightbar from "@/components/Rightbar";
 import Typewriter from "react-ts-typewriter";
 export default function Home() {
+  
   return (
     <main className="flex flex-col">
       <Header />
@@ -20,7 +21,7 @@ export default function Home() {
           <div className="hero lg:h-full  h-full bg-base-200">
             <div className="hero-content flex-col">
               <div className=" flex items-center flex-col ">
-                <h1 className=" text-6xl font-sans font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-secondary via-success to-secondary mb-2 ">
+                <h1 className=" text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-secondary via-success to-secondary mb-2 ">
                   WELCOME YOU ALL
                 </h1>
                 <div className=" text-2xl text-center w-full mb-2 ">

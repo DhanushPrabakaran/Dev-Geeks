@@ -1,15 +1,14 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Comic_Neue } from 'next/font/google'
-import { NextAuthProvider } from "@/components/provider";
+import {Russo_One} from 'next/font/google'
+import { NextAuthProvider } from "@/components/provider"
+const russo_One = Russo_One({
+  weight:'400',
+  subsets:["latin"],
 
-const comic_neue =Comic_Neue(
-  {
-  weight: ['300' , '400' , '700' ],
-  style: ['normal', 'italic'],
-  subsets: ['latin'],
-  },
-);
+})
+
+
 export const metadata: Metadata = {
   title: 'Dev Home',
   description: 'a open website for developers',
@@ -22,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className={russo_One.className}>
         <NextAuthProvider>{children}</NextAuthProvider>
       </body>
     </html>

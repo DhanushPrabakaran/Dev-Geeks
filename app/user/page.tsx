@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import Container from "@/components/Container";
 import Navbar from "@/components/Navbar";
 import Rightbar from "@/components/Rightbar";
+import ProfileForm from "@/components/ProfileForm";
 export default function Home() {
   return (
     <main className="flex flex-col">
@@ -18,13 +19,17 @@ export default function Home() {
         </div>
         <div className=" flex-1 h-screen grow-1  overflow-y-scroll overflow-x-hidden scroll-smooth flex flex-col  ">
           <div className=" text-4xl text-center font-extrabold font-sans text-secondary m-4">
-            Projects
+            Profile
           </div>
-          {/* <Container />
-          <Container />
-          <Container /> */}
+          <div>
+            <ProfileForm></ProfileForm>
+          </div>
+          {/* <form action="">
+          <input type="text" placeholder="Type here" className="input input-bordered input-primary w-full max-w-xs" />
+          <input type="text" placeholder="Type here" className="input input-bordered input-primary w-full max-w-xs" />
+          </form> */}
         </div>
-        <Rightbar />
+        
       </div>
       <Footer />
       <CopyRight/>

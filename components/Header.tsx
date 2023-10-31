@@ -70,7 +70,7 @@ const Header = () => {
             className="mt-3 z-[1] p-2 shadow menu menu-md dropdown-content bg-base-100 rounded-box w-40"
           >
             <li>
-              <a className="justify-center btn-neutral m-1">Profile</a>
+              <a href="/user" className="justify-center btn-neutral m-1">Profile</a>
             </li>
             <li>
               {!session ? (
